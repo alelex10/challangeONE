@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- favicon -->
+    <link
+      rel="icono de acceso directo"
+      href="/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/favicon.ico" type="imagen/x-icon" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imprima&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <!-- cdn icono github -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <main>
+      <h2>a </h2>
+      
+      <div class="content-flex">
+          <!-- espacio para ingresar texto -->
+          <textarea
+            type="text"
+            id="txtIngresado"
+            placeholder="ingrese el texto aqui"
+          ></textarea>
+        <!-- botones -->
+        <div class="botones">
+          <!-- logo github -->
+          <a href="https://github.com/"><i class="fi fi-brands-github github"></i></a>
+          <!-- advertencia-->
+          <p class="advertencia">
+            el texto solo debe contener minusculas, sin acentos ni caracteres
+            especiales
+          </p>
+          <!-- boton encriptar -->
+          <input
+            id="encriptar"
+            onclick="encriptar();"
+            type="button"
+            value="encriptar"
+          />
+          <!-- boton desencriptar -->
+          <input
+            id="desencriptar"
+            onclick="desencriptar();"
+            type="button"
+            value="desencriptar"
+          />
+        </div>
+      </div>
+      <!-- caja de texto encriptado/desencriptado -->
+      <div class="cajaTextoEncriptado">
+        <p id="mostrarTexto"></p>
+        <div class="noTexto">
+          <img src="img/Muñeco.png" alt="no se encontro texto para encriptar" />
+          <p class="p1">Ningún mensaje fue encontrado</p>
+          <p class="p2">
+            Ingresa el texto que desees encriptar o desencriptar.
+          </p>
+        </div>
+        <!-- boton copiar -->
+        <!-- <p id="copiado">copiado</p> -->
+        <input
+          id="copiar"
+          onclick="copiarTextoAlPortapapeles();"
+          type="button"
+          value="copiar"
+        />
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

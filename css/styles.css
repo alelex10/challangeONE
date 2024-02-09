@@ -1,0 +1,216 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Imprima", sans-serif;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: #f3f5fc;
+}
+
+main h2 {
+  display: flex;
+  color: #0a3871;
+  font-size: 65px;
+  width: 10%;
+  justify-content: center;
+}
+
+.content-flex {
+  width: 55%;
+  margin: 5% 5% 0% 0%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.advertencia {
+  display: none;
+}
+#txtIngresado {
+  border: 0px;
+  background-color: transparent;
+  width: 85%;
+  font-size: 1.9rem;
+  color: #0a3871;
+  resize: none;
+  flex: 1;
+}
+#txtIngresado::placeholder {
+  color: #0a3871;
+  font-size: 1.7;
+}
+#txtIngresado:focus {
+  outline: none;
+}
+.advertencia {
+  position: absolute;
+  bottom: 110%;
+}
+/* signo "!"  */
+.advertencia::before {
+  display: inline-block;
+  width: 0.9rem;
+  text-align: center;
+  content: "\0021";
+  border-radius: 50%;
+  background-color: #495057;
+  color: white;
+}
+.content-flex .botones {
+  margin-top: 2rem;
+  position: relative;
+  width: auto;
+}
+.github{
+  color: #000000;
+  font-size: 3rem;
+  top: 11%;
+  right: 103%;
+  position: absolute;
+}
+.content-flex .botones input,
+#copiar {
+  font-size: 1rem;
+  width: 40%;
+  height: 3.8rem;
+  border-radius: 1.5rem;
+  color: #0a3871;
+  background-color: #d8dfe8;
+  border: 1px solid #0a3871;
+}
+.content-flex .botones input:hover,
+#copiar:hover {
+  background-color: #0a3871;
+  border: 0px;
+  color: white;
+  cursor: pointer;
+}
+.cajaTextoEncriptado {
+  position: relative;
+  width: 25%;
+  background-color: white;
+  border-radius: 1.5rem;
+  margin: 4% 5% 0% 0%;
+  box-shadow: 0px 5px 5px #0000004a;
+  height: 80%;
+}
+.cajaTextoEncriptado .noTexto {
+  text-align: center;
+  margin-top: 20%;
+  padding: 0 5%;
+}
+#mostrarTexto {
+  display: none;
+  overflow-y: scroll;
+  max-width: 90%;
+  height: 77%;
+  font-size: 1.5rem;
+  color: #495057;
+  text-align: left;
+  margin: 5% 5% 0 5%;
+}
+.noTexto img{
+  width: 90%;
+}
+.noTexto .p1 {
+  margin-top: 1rem;
+  color: #343a40;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.noTexto .p2,
+.advertencia,
+#copiado {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #495057;
+}
+/* 
+-mensaje que indica que se copio el tecto
+-no funciona como quiero, sin usar animaciones 
+*/
+/* #copiado {
+  position: absolute;
+  bottom: 6rem;
+  left: 40%;
+  opacity: 0;
+  transition: 400ms opacity;
+} */
+#copiar {
+  position: absolute;
+  bottom: 1rem;
+  left: 15%;
+  width: 70%;
+  display: none;
+  background-color: white;
+}
+/* TABLET */
+@media screen and (max-width:768px) {
+  h2{
+    height: 5vh;
+    margin-bottom: 5vh;
+  }
+  main{
+    height: auto;
+    flex-wrap: wrap;
+    padding: 5vh 5%;
+  }
+  .content-flex{
+    margin: 0%;
+    width: 100%;
+    height: 65vh;
+  }
+  #txtIngresado{
+    width: 100%;
+  }
+  .github{
+    left: 88%;
+  }
+  .cajaTextoEncriptado{
+    margin: 0%;
+    margin-top: 5vh;
+    min-height: 10vh;
+    /* min-height: calc(10vh + (1rem + 3.8rem)); */
+    width: 100%;
+  }
+  .cajaTextoEncriptado .noTexto {
+    margin: 0%;
+  }
+  .noTexto img {
+    display: none;
+  }
+  #copiar {
+    position: relative;
+    bottom: 0;
+    margin: 1rem 0;
+  }
+ 
+}
+@media screen and (max-width:375px) {
+  .content-flex{
+    height: 60vh;
+  }
+  main{
+    padding: 0 3% 5vh 3%;
+  }
+  .cajaTextoEncriptado{
+    margin: 2vh 0 2vh 0;
+    min-height: 20vh;
+  }
+  .content-flex .botones input{
+    width: 100%;
+    margin-bottom: 3vh;
+  }
+  .content-flex .botones{
+    position: static ; 
+  }
+  .github{
+    top:1.4rem;
+    left: 80%;
+  }
+}
