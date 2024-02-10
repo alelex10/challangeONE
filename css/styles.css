@@ -85,6 +85,7 @@ main h2 {
 }
 .content-flex .botones input:hover,
 #copiar:hover {
+  transition: 700ms color;
   background-color: #0a3871;
   border: 0px;
   color: white;
